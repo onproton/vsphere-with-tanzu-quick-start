@@ -7,11 +7,11 @@ spec:
     version: v1.21
   topology:
     controlPlane:
-      class: guaranteed-small
+      class: best-effort-small
       count: 1
       storageClass: kubernetes-demo-storage-policy
     workers:
-      class: guaranteed-small
+      class: best-effort-small
       count: 2
       storageClass: kubernetes-demo-storage-policy
   settings:

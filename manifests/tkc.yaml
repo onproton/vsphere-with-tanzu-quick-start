@@ -12,7 +12,7 @@ spec:
       storageClass: kubernetes-demo-storage-policy
     workers:
       class: best-effort-small
-      count: 2
+      count: 1
       storageClass: kubernetes-demo-storage-policy
   settings:
     storage:

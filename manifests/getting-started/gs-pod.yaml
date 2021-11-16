@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: gs-private-reg-container
-    image: harbor.tanzu.rams.adp.vcu.edu/test/getting-started:latest
+    image: harbor.tanzu.rams.adp.vcu.edu/test/getting-started/sha256:742fe47c
   imagePullSecrets:
   - name: gs-secret

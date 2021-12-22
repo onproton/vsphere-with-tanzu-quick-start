@@ -1,0 +1,8 @@
+apiVersion: installers.tmc.cloud.vmware.com/v1alpha1
+kind: AgentInstall
+metadata:
+  name: tmc-agent-installer-config
+  namespace: svc-tmc-c4024
+spec:
+  operation: INSTALL
+  registrationLink: https://vcuucc.tmc.cloud.vmware.com/installer?id=118f5b6ca1040498c15d6cfc06b7bda6249dc9d0a0097807f7f574869a26b540&source=registration&type=tkgs

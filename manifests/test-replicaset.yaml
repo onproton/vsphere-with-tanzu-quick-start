@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: enginx
+  name: nginx
   labels:
     app: nginx
     tier: lb
@@ -16,5 +16,5 @@ spec:
           tier: lb
     spec:
         containers:
-        - name: enginx-replicaset
+        - name: nginx-replicaset
             image: nginx

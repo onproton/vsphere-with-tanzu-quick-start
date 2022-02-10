@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: nginx
+  name: nginx-emd
   labels:
-    app: nginx
+    app: nginx-emd
     tier: lb
 spec:
   replicas: 3
@@ -16,5 +16,5 @@ spec:
           tier: lb
     spec:
         containers:
-        - name: nginx-replicaset
+        - name: nginx-replicaset-emd
           image: nginx

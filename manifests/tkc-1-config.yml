@@ -4,20 +4,17 @@ metadata:
   name: tkc-1
 spec:
   distribution:
-    version: v1.21
+    version: v1.20
   topology:
     controlPlane:
-      class: best-effort-small
+      class: best-effort-xsmall
       count: 1
       storageClass: kubernetes-storage-policy
     workers:
-      class: best-effort-small
+      class: best-effort-xsmall
       count: 1
       storageClass: kubernetes-storage-policy
   settings:
     storage:
       classes: ["kubernetes-storage-policy"]              #Named PVC storage classes
       defaultClass: kubernetes-storage-policy                     #Default PVC storage class
-    network:
-      pods:
-        cidrBlocks: [192.168.200.0/24]

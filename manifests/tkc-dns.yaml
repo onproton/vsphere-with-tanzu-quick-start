@@ -1,0 +1,20 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tkc-dns
+spec:
+  distribution:
+    version: v1.21
+  topology:
+    controlPlane:
+      class: best-effort-xsmall
+      count: 1
+      storageClass: kubernetes-storage-policy
+    workers:
+      class: best-effort-xsmall
+      count: 1
+      storageClass: kubernetes-storage-policy
+  settings:
+    storage:
+      classes: ["kubernetes-storage-policy"]              #Named PVC storage classes
+      defaultClass: kubernetes-storage-policy                     #Default PVC storage class

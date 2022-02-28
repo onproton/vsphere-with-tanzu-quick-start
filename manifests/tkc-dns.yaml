@@ -17,7 +17,7 @@ spec:
   settings:
     network:
       pods:
-        cidrBlocks: ["10.80.0.0/24"] 
+        cidrBlocks: ["10.80.0.0/16"] 
     storage:
       classes: ["kubernetes-storage-policy"]              #Named PVC storage classes
       defaultClass: kubernetes-storage-policy                     #Default PVC storage class

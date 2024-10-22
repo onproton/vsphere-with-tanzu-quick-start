@@ -1,0 +1,20 @@
+apiVersion: run.tanzu.vmware.com/v1alpha1
+kind: TanzuKubernetesCluster
+metadata:
+  name: tau-tkc1
+spec:
+  distribution:
+    version: v1.20
+  topology:
+    controlPlane:
+      class: best-effort-xsmall
+      count: 1
+      storageClass: kubernetes-storage-policy
+    workers:
+      class: best-effort-xsmall
+      count: 1
+      storageClass: kubesp
+  settings:
+    storage:
+      classes: ["kubesp"]              #Named PVC storage classes
+      defaultClass: kubesp                     #Default PVC storage class

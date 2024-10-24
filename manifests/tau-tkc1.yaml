@@ -4,17 +4,17 @@ metadata:
   name: tau-tkc1
 spec:
   distribution:
-    version: v1.20
+    version: v1.23
   topology:
     controlPlane:
-      class: best-effort-xsmall
+      class: guaranteed-small
       count: 1
-      storageClass: kubernetes-storage-policy
+      storageClass: kubesp
     workers:
-      class: best-effort-xsmall
+      class: guaranteed-small
       count: 1
       storageClass: kubesp
   settings:
     storage:
       classes: ["kubesp"]              #Named PVC storage classes
-      defaultClass: kubesp                     #Default PVC storage class
+      defaultClass: kubesp

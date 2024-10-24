@@ -1,4 +1,4 @@
-apiVersion: run.tanzu.vmware.com/v1alpha1
+apiVersion: run.tanzu.vmware.com/v1alpha3
 kind: TanzuKubernetesCluster
 metadata:
   name: tau-tkc1

@@ -1,20 +1,22 @@
-apiVersion: run.tanzu.vmware.com/v1alpha3
+apiVersion: run.tanzu.vmware.com/v1alpha2
 kind: TanzuKubernetesCluster
 metadata:
   name: tau-tkc1
+  namespace: tau-ns1
 spec:
-  distribution:
-    version: v1.23
   topology:
     controlPlane:
-      class: best-effort-xsmall
-      count: 1
+      replicas: 1
+      vmClass: best-effort-large
       storageClass: kubesp
-    workers:
-      class: best-effort-xsmall
-      count: 1
+      tkr:  
+        reference:
+          name: v1.23.8---vmware.3-tkg.1
+    nodePools:
+    - name: worker-nodepool-a1
+      replicas: 3
+      vmClass: best-effort-large
       storageClass: kubesp
-  settings:
-    storage:
-      classes: ["kubesp"]              #Named PVC storage classes
-      defaultClass: kubesp
+      tkr:  
+        reference:
+          name: v1.23.8---vmware.3-tkg.1

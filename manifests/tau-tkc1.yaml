@@ -7,11 +7,11 @@ spec:
     version: v1.23
   topology:
     controlPlane:
-      class: guaranteed-small
+      class: best-effort-xsmall
       count: 1
       storageClass: kubesp
     workers:
-      class: guaranteed-small
+      class: best-effort-xsmall
       count: 1
       storageClass: kubesp
   settings:
